@@ -1,6 +1,11 @@
+const dotenv = require('dotenv');
 var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
+
+dotenv.config();
+
+const apiKey = process.env.API_KEY;
 
 const app = express()
 
