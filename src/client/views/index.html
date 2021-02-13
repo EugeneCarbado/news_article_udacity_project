@@ -8,26 +8,27 @@
     <body>
 
         <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <h1>Evaluate a News post using the MeaningCloud API.</h1>
         </header>
-
         <main>
-            <section>
+            <section class="input_section">
                 <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                    <input class="user_input" id="urlInput" type="text" name="input" value="" placeholder="Enter a URL here">
+                    <input class="btn" type="submit" value="Analysis" onclick="return handleSubmit(event)">
                 </form>
+                <div class="error_message" id="errorMessage"></div>
+            </section>
+            <section class="output_section">
+                <h3>Results</h3>
+                <div class="result" id="result_output"></div>
+                <div class="subjectivity" id="subjectivity_output"></div>
+                <div class="score" id="score_output"></div>
+            </section>
+            <section class="attribute_section">
+                <img src="../images/meaningCloud-logo.png" alt="Meaning Cloud logo" height="100" width="247">
+                <a href="https://www.meaningcloud.com/" target="blank">Powered by MeaningCloud API</a>
             </section>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
         </main>
 
         <footer>
