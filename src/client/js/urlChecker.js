@@ -1,7 +1,7 @@
   
 function checkUrl(urlInput) {
     const url = /^http:\/\/|^https:\/\//i
-    return url.test(inputText);
+    return url.test(urlInput);
 }
 
 export { checkUrl }

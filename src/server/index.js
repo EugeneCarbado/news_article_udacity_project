@@ -4,6 +4,7 @@ var path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const fetch = require('node-fetch')
 
 const mockAPIResponse = require('./mockAPI.js')
 const apiKey = process.env.API_KEY;
@@ -33,7 +34,7 @@ app.get('/test', function (req, res) {
 })
 
 app.post("/article", async(req, res) => {
-    const apiData = await fetch(`${baseUrl}${API_KEY}&lang=auto&url=${req.body}`);
+    const apiData = await fetch(`${baseUrl}${apiKey}&lang=auto&url=${req.body}`);
 
     try {
         const data = await apiData.json();

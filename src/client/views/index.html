@@ -12,15 +12,15 @@
         </header>
         <main>
             <section class="input_section">
-                <form class="" onsubmit="return handleSubmit(event)">
+                <form class="" id="submit" onsubmit="return Client.handleSubmit(event)">
                     <input class="user_input" id="urlInput" type="text" name="input" value="" placeholder="Enter a URL here">
-                    <input class="btn" type="submit" value="Analysis" onclick="return handleSubmit(event)">
+                    <input class="btn" type="submit" id="submit" value="Analysis" onclick="return Client.handleSubmit(event)">
                 </form>
                 <div class="error_message" id="errorMessage"></div>
             </section>
             <section class="output_section">
                 <h3>Results</h3>
-                <div class="result" id="result_output"></div>
+                <div class="results" id="result_output"></div>
                 <div class="subjectivity" id="subjectivity_output"></div>
                 <div class="score" id="score_output"></div>
             </section>
