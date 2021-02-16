@@ -1,4 +1,4 @@
-const formsubmit = document.querySelector('btn');
+// const formsubmit = document.querySelector('btn');
 document.addEventListener('click', handleSubmit);
 
 function handleSubmit(event) {
@@ -20,8 +20,8 @@ function handleSubmit(event) {
         })
         .then((res) => res.json())
         .then((res) => {
-            console.log(res);
-        }).then(() => {updateUI();})
+            updateUI(res);
+        })
     } else {
         console.log(errorMessage, "invalid url")
     }
