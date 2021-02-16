@@ -1,3 +1,5 @@
+const formsubmit = document.querySelector('btn');
+document.addEventListener('click', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault()
