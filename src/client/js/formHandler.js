@@ -36,7 +36,7 @@ async function updateUI(res) {
       )}`;
 }
 
-const score = (score_tag) => {
+export const score = (score_tag) => {
     if (score_tag === "P+" || score_tag === "P") {
         return "Positive";
     } else if (score_tag === "N+" || score_tag === "N") {
