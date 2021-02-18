@@ -15,11 +15,11 @@ describe("with url protocol", () => {
 describe("without protocol", () => {
   test("should return true", () => {
     const input = "www.google.co.uk";
-    expect(checkUrl(input)).toBe(true);
+    expect(checkUrl(input)).toBe(false);
   });
   test("should return true", () => {
     const input = "google.co.uk";
-    expect(checkUrl(input)).toBe(true);
+    expect(checkUrl(input)).toBe(false);
   });
   test("should return false", () => {
     const input = "google . co . uk";
