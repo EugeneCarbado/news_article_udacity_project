@@ -2,6 +2,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Tajawal', sans-serif;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+
 }
 
 main {
@@ -11,4 +14,11 @@ main {
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+h1 {
+    margin: 0 auto;
+    padding-top: 50px;
+    font-size: 2em;
+    color: #FFFFFF;
 }

@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Natural Language processing</title>
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Natural Language processing</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
 
-        <header>
-            <h1>Evaluate a News post using the MeaningCloud API.</h1>
-        </header>
-        <main>
-            <section class="input_section">
-                <form class="" id="submit" onsubmit="return Client.handleSubmit(event)">
-                    <input class="user_input" id="urlInput" type="text" name="input" value="" placeholder="Enter a URL here">
-                    <input class="btn" type="submit" id="submit" value="Analysis" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-                <div class="error_message" id="errorMessage"></div>
-            </section>
-            <section class="output_section">
-                <h3>Results</h3>
-                <div class="results" id="result_output"></div>
-                <div class="subjectivity" id="subjectivity_output"></div>
-                <div class="score" id="score_output"></div>
-            </section>
-            <section class="attribute_section">
-                <img src="../images/meaningCloud-logo.png" alt="Meaning Cloud logo" height="100" width="247">
-                <a href="https://www.meaningcloud.com/" target="blank">Powered by MeaningCloud API</a>
-            </section>
+<body>
 
-        </main>
+    <header>
+        <h1>Evaluating a News post using the MeaningCloud API.</h1>
+    </header>
+    <main>
+        <section class="input_section">
+            <form class="" id="submit" onsubmit="return Client.handleSubmit(event)">
+                <input class="user_input" id="urlInput" type="text" name="input" value=""
+                    placeholder="Enter a URL here">
+                <input class="btn" type="submit" id="submit" value="Analysis"
+                    onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+            </form>
+            <div class="error_message" id="errorMessage"></div>
+        </section>
+        <section class="output_section">
+            <h3>Results:</h3>
+            <div class="results" id="result_output"></div>
+            <div class="subjectivity" id="subjectivity_output"></div>
+            <div class="score" id="score_output"></div>
+        </section>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+    </main>
 
-    </body>
+    <footer>
+        <h3>@Copyright Eugene Carbado</h3>
+    </footer>
+
+</body>
+
 </html>

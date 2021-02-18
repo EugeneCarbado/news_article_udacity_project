@@ -1,6 +1,3 @@
-// const formsubmit = document.querySelector('btn');
-// document.addEventListener('click', handleSubmit);
-
 function handleSubmit(event) {
     event.preventDefault()
 
@@ -14,14 +11,15 @@ function handleSubmit(event) {
             cache: "no-cache",
             credentials: "same-origin",
             headers: {
-                "Content-Type": "text/plain",
+                "Content-Type": "application/json",
             },
-            body: formUrl,
+            body: JSON.stringify({ formUrl }),
         })
-        .then((res) => res.json())
-        .then((res) => {
-            updateUI(res);
-        })
+            .then((res) => res.json())
+            .then((res) => {
+                updateUI(res);
+                console.log(res);
+            })
     } else {
         console.log(errorMessage, "invalid url")
     }
@@ -31,9 +29,25 @@ function handleSubmit(event) {
 
 async function updateUI(res) {
     // GET function that takes the info from the server
-    document.querySelector('#result_output').innerText = res.message;
+    document.querySelector('#result_output').innerText = 'Confidence = ' + res.confidence + '%';
     document.querySelector('#subjectivity_output').innerText = res.subjectivity;
-    document.querySelector('#score_output').innerText = res.score_tag;
+    document.querySelector('#score_output').innerText = `Polarity score: ${score(
+        res.score_tag
+      )}`;
 }
+
+const score = (score_tag) => {
+    if (score_tag === "P+" || score_tag === "P") {
+        return "Positive";
+    } else if (score_tag === "N+" || score_tag === "N") {
+        return "Negative";
+    } else if (score_tag === "NEU") {
+        return "Neutral";
+    } else {
+        return "Non Sentimental";
+    }
+};
+
+
 
 export { handleSubmit }
